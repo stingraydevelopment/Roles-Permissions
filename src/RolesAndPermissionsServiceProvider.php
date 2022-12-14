@@ -43,7 +43,7 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
 
             // Publishing the views.
             $this->publishes([
-                __DIR__.'/../resources/views/admin/' => resource_path('views/admin/roles-and-permissions'),
+                __DIR__.'/../resources/views/admin/' => resource_path('views/admin'),
             ], 'views');
 
             // Publishing Vue Components.
