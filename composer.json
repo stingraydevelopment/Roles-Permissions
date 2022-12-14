@@ -1,0 +1,54 @@
+{
+    "name": "stingraydevelopment/roles-and-permissions",
+    "description": "Adds Roles and Permissions to Laravel",
+    "keywords": [
+        "stingraydevelopment",
+        "roles-and-permissions"
+    ],
+    "homepage": "https://github.com/stingraydevelopment/roles-and-permissions",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dan Castanera",
+            "email": "dan@stingraydev.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stingraydevelopment\\RolesAndPermissions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stingraydevelopment\\RolesAndPermissions\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stingraydevelopment\\RolesAndPermissions\\RolesAndPermissionsServiceProvider"
+            ],
+            "aliases": {
+                "RolesAndPermissions": "Stingraydevelopment\\RolesAndPermissions\\RolesAndPermissionsFacade"
+            }
+        }
+    }
+}
