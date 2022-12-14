@@ -38,18 +38,23 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
 
             // Publish the blade directives.
             $this->publishes([
-                __DIR__ . '/../blade/' => base_path('app/Blade/BladeDirectives.php'),
+                __DIR__ . '/../blade/' => app_path('Blade/BladeDirectives.php'),
             ], 'blade');
 
             // Publishing the views.
             $this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/admin/roles-and-permissions'),
+                __DIR__.'/../resources/views/admin/' => resource_path('views/admin/roles-and-permissions'),
             ], 'views');
 
             // Publishing Vue Components.
             $this->publishes([
-                __DIR__.'/../resources/js/components' => resource_path('js/components'),
+                __DIR__.'/../resources/js/components/' => resource_path('js/components'),
             ], 'assets');
+
+            // Publishing Controllers.
+            $this->publishes([
+                __DIR__.'/../controllers/' => app_path('Controllers'),
+            ], 'controllers');
 
             // Publishing the translation files.
             /*$this->publishes([
