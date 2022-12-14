@@ -85,4 +85,4 @@ return new class extends Migration
         Schema::dropIfExists('permissions');
         Schema::dropIfExists('roles');
     }
-}
+};
