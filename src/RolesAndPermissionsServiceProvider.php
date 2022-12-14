@@ -53,7 +53,7 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
 
             // Publishing Controllers.
             $this->publishes([
-                __DIR__.'/../controllers/' => app_path('Controllers'),
+                __DIR__.'/../controllers/' => app_path('Http/Controllers'),
             ], 'controllers');
 
             // Publishing the translation files.
