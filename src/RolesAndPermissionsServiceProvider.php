@@ -14,7 +14,7 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
     {
 
         // Add custom blade directives.
-        BladeDirectives::boot();
+        // BladeDirectives::boot();
         
         /*
          * Optional methods to load your package assets
