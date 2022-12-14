@@ -9,7 +9,7 @@
  * @link     https://ctsfla.com/equus
  */
 
-namespace App\Blade;
+namespace Stingraydevelopment\RolesAndPermissions;
 
 use Illuminate\Support\Facades\Blade;
 

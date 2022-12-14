@@ -2,7 +2,7 @@
 
 namespace Stingraydevelopment\RolesAndPermissions;
 
-use App\Blade\BladeDirectives;
+use Stingraydevelopment\RolesAndPermissions\BladeDirectives;
 use Illuminate\Support\ServiceProvider;
 
 class RolesAndPermissionsServiceProvider extends ServiceProvider
@@ -12,6 +12,9 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        // Add custom blade directives.
+        BladeDirectives::boot();
         
         /*
          * Optional methods to load your package assets
@@ -72,7 +75,6 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
             return new RolesAndPermissions;
         });
 
-        // Add custom blade directives.
-        BladeDirectives::boot();
+        
     }
 }
