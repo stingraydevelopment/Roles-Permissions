@@ -12,9 +12,7 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Add custom blade directives.
-        BladeDirectives::boot();
-
+        
         /*
          * Optional methods to load your package assets
          */
@@ -58,6 +56,9 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
             // Registering package commands.
             // $this->commands([]);
         }
+
+        // Add custom blade directives.
+        BladeDirectives::boot();
     }
 
     /**
