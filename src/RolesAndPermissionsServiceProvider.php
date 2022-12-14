@@ -56,9 +56,7 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
             // Registering package commands.
             // $this->commands([]);
         }
-
-        // Add custom blade directives.
-        BladeDirectives::boot();
+        
     }
 
     /**
@@ -73,5 +71,8 @@ class RolesAndPermissionsServiceProvider extends ServiceProvider
         $this->app->singleton('roles-and-permissions', function () {
             return new RolesAndPermissions;
         });
+
+        // Add custom blade directives.
+        BladeDirectives::boot();
     }
 }
