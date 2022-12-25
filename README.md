@@ -1,10 +1,10 @@
-# Very short description of the package
+# Roles and Permissions
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stingraydevelopment/roles-and-permissions.svg?style=flat-square)](https://packagist.org/packages/stingraydevelopment/roles-and-permissions)
 [![Total Downloads](https://img.shields.io/packagist/dt/stingraydevelopment/roles-and-permissions.svg?style=flat-square)](https://packagist.org/packages/stingraydevelopment/roles-and-permissions)
 ![GitHub Actions](https://github.com/stingraydevelopment/roles-and-permissions/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This Roles & Permissions by StingrayDevelopment helps add roles & permissions capabilities along with the relationship between each other and the users.
 
 ## Installation
 
@@ -13,6 +13,9 @@ You can install the package via composer:
 ```bash
 composer require stingraydevelopment/roles-and-permissions
 ```
+
+### Views
+This package automatically creates management views for both roles and permissions when you publish the 
 
 ## Usage
 
