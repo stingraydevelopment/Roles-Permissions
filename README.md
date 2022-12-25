@@ -35,7 +35,11 @@ Which provider or tags files would you like to publish?
 ```
 Type the number next to Stingraydevelopment\RolesAndPermissions\RolesAndPermissionsServiceProvider and click Enter. This will copy all of the necessary files you need in order use and manage Roles & Permissions easily within your Laravel app. 
 
+### Integrate
+
 There are some additional steps needed to use Roles & Permissions. Please follow the next few steps carefully.
+
+#### User Class
 
 Roles & Permissions was built with a default Laravel installation we assume that the initial user model location remains the same. "App/Models/User.php"
 
