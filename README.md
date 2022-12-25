@@ -14,8 +14,57 @@ You can install the package via composer:
 composer require stingraydevelopment/roles-and-permissions
 ```
 
-### Views
-This package automatically creates management views for both roles and permissions when you publish the 
+### Publish
+Publish the package in your Laravel app using the following command.
+```php
+php artisan vendor:publish
+```
+You will see something similiar to the following
+
+```php
+Which provider or tags files would you like to publish?
+  Publish files from all providers and tags listed below ......................................................................................... 0
+  Provider: Illuminate\Foundation\Providers\FoundationServiceProvider ............................................................................ 1
+  Provider: Illuminate\Mail\MailServiceProvider .................................................................................................. 2
+  Provider: Illuminate\Notifications\NotificationServiceProvider ................................................................................. 3
+  Provider: Illuminate\Pagination\PaginationServiceProvider ...................................................................................... 4  
+  Provider: Laravel\Sail\SailServiceProvider ..................................................................................................... 5
+  Provider: Laravel\Sanctum\SanctumServiceProvider ............................................................................................... 6
+  Provider: Laravel\Tinker\TinkerServiceProvider ................................................................................................. 7
+  Provider: Stingraydevelopment\RolesAndPermissions\RolesAndPermissionsServiceProvider ........................................................... 8
+```
+Type the number next to Stingraydevelopment\RolesAndPermissions\RolesAndPermissionsServiceProvider and click Enter. This will copy all of the necessary files you need in order use and manage Roles & Permissions easily within your Laravel app. 
+
+There are some additional steps needed to use Roles & Permissions. Please follow the next few steps carefully.
+
+Roles & Permissions was built with a default Laravel installation we assume that the initial user model location remains the same. "App/Models/User.php"
+
+Open your User.php and add the following functions.
+```php
+    /**
+     * Roles relationship.
+     * Roles imported using the StingrayDevelopment\RolesAndPermissions package.
+     * 
+     * @return Collection   Collection of Role objects.
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    /**
+     * Permissions relationship.
+     * Permissions imported using the StingrayDevelopment\RolesAndPermissions package.
+     * 
+     * @return Collection   Collection of Permission objects.
+     */
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class);
+    }
+```
+
+### Vue
 
 ## Usage
 
